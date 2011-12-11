@@ -1,1 +1,1 @@
-#define UTS_RELEASE "2.6.32.9_xD"
+#define UTS_RELEASE "2.6.32.9_xD-MIUI"
