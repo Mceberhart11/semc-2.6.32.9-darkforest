@@ -16,7 +16,7 @@ static struct as3676_platform_led as3676_leds_mapping[] = {
 		.name = "lcd-backlight",
 		.sinks = BIT(AS3676_SINK_01),
 		.flags = AS3676_FLAG_ALS | AS3676_FLAG_PWM_INIT
-			| AS3676_FLAG_DLS | AS3676_FLAG_WAIT_RESUME,
+			| AS3676_FLAG_DLS,
 		.max_current = 25000,
 		.default_brightness = LED_FULL,
 	},
@@ -35,19 +35,19 @@ static struct as3676_platform_led as3676_leds_mapping[] = {
 	{
 		.name = "red",
 		.sinks = BIT(AS3676_SINK_41),
-		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK | AS3676_FLAG_ALS,
+		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK,
 		.max_current = 25000,
 	},
 	{
 		.name = "green",
 		.sinks = BIT(AS3676_SINK_42),
-		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK | AS3676_FLAG_ALS,
+		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK,
 		.max_current = 25000,
 	},
 	{
 		.name = "blue",
 		.sinks = BIT(AS3676_SINK_43),
-		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK | AS3676_FLAG_ALS,
+		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK,
 		.max_current = 25000,
 	},
 };
@@ -56,7 +56,6 @@ struct as3676_platform_data as3676_platform_data = {
 	.leds = as3676_leds_mapping,
 	.num_leds = ARRAY_SIZE(as3676_leds_mapping),
 	.als_connected = 1,
-	.als_wait = 100,
 	.dls_connected = true,
-	.ldo_mV = 3000,
+	.ldo_mV = 3300,
 };

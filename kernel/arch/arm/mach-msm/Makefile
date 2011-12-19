@@ -148,12 +148,11 @@ obj-$(CONFIG_MACH_SEMC_IYOKAN) += board-semc_mogami.o board-semc_mogami-rfkill.o
 obj-$(CONFIG_MACH_SEMC_URUSHI) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-urushi.o leds-urushi.o gpio-urushi.o charger-urushi.o
 obj-$(CONFIG_MACH_SEMC_SMULTRON) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-smultron.o leds-smultron.o gpio-smultron.o charger-smultron.o
 obj-$(CONFIG_MACH_SEMC_MANGO) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-mango.o leds-mango.o gpio-mango.o charger-mango.o
-obj-$(CONFIG_MACH_SEMC_COCONUT) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-coconut.o leds-coconut.o gpio-coconut.o charger-coconut.o
-obj-$(CONFIG_MACH_SEMC_AKANE) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-akane.o leds-akane.o gpio-akane.o charger-akane.o keypad-pmic-mogami.o keypad-pmic-akane.o
-obj-$(CONFIG_MACH_SEMC_AZUSA) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-azusa.o leds-azusa.o gpio-azusa.o charger-azusa.o keypad-pmic-mogami.o keypad-pmic-azusa.o
-obj-$(CONFIG_MACH_SEMC_SATSUMA) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-satsuma.o leds-satsuma.o gpio-satsuma.o charger-satsuma.o
-obj-$(CONFIG_MACH_SEMC_AYAME) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-anzu.o leds-anzu.o gpio-anzu.o charger-anzu.o
-obj-$(CONFIG_MACH_SEMC_HAIDA) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-haida.o leds-haida.o gpio-haida.o charger-haida.o
+obj-$(CONFIG_MACH_SEMC_AKANE) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-akane.o leds-akane.o gpio-akane.o charger-akane.o
+obj-$(CONFIG_MACH_SEMC_AZUSA) += board-semc_mogami.o board-semc_mogami-rfkill.o keypad-azusa.o leds-azusa.o gpio-azusa.o charger-azusa.o
+
+
+obj-$(CONFIG_ZEUS_VIBRATOR) += vibrator-zeus.o
 obj-$(CONFIG_MOGAMI_VIBRATOR) += vibrator-mogami.o
 
 obj-$(CONFIG_MACH_SEMC_ZEUS) += keypad-zeus.o
@@ -204,5 +203,3 @@ ifdef CONFIG_ARCH_MSM7X30
 endif
 
 obj-$(CONFIG_PMIC_TIME) += pmic_time.o
-
-obj-$(CONFIG_SEMC_MOGAMI_FELICA_SUPPORT) += semc_mogami_felica.o

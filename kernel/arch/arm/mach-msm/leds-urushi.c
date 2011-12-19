@@ -15,32 +15,44 @@ static struct as3676_platform_led as3676_leds_mapping[] = {
 	{
 		.name = "lcd-backlight",
 		.sinks = BIT(AS3676_SINK_01),
-		.flags = AS3676_FLAG_ALS_GROUP1 | AS3676_FLAG_WAIT_RESUME,
-		.max_current = 20000,
+		.flags = AS3676_FLAG_ALS_GROUP1,
+		.max_current = 25000,
 		.default_brightness = LED_FULL,
 	},
 	{
-		.name = "torch",
-		.sinks = BIT(AS3676_SINK_30) | BIT(AS3676_SINK_31),
-		.max_current = 30000,
+		.name = "button-backlight",
+		.sinks = BIT(AS3676_SINK_RGB1),
+		.flags = AS3676_FLAG_ALS_GROUP2,
+		.max_current = 4000,
+	},
+	{
+		.name = "keyboard-backlight",
+		.sinks = BIT(AS3676_SINK_32) | BIT(AS3676_SINK_33),
+		.flags = AS3676_FLAG_ALS_GROUP2,
+		.max_current = 20000,
+	},
+	{
+		.name = "tally-light",
+		.sinks = BIT(AS3676_SINK_RGB3),
+		.max_current = 10000,
 	},
 	{
 		.name = "red",
 		.sinks = BIT(AS3676_SINK_41),
 		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK,
-		.max_current = 20000,
+		.max_current = 6000,
 	},
 	{
 		.name = "green",
 		.sinks = BIT(AS3676_SINK_42),
 		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK,
-		.max_current = 20000,
+		.max_current = 7500,
 	},
 	{
 		.name = "blue",
 		.sinks = BIT(AS3676_SINK_43),
 		.flags = AS3676_FLAG_RGB | AS3676_FLAG_BLINK,
-		.max_current = 20000,
+		.max_current = 3750,
 	},
 };
 
@@ -48,7 +60,6 @@ struct as3676_platform_data as3676_platform_data = {
 	.leds = as3676_leds_mapping,
 	.num_leds = ARRAY_SIZE(as3676_leds_mapping),
 	.als_connected = 1,
-	.als_wait = 100,
 	.dls_connected = false,
 	.ldo_mV = 3300,
 };

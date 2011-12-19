@@ -26,7 +26,16 @@ struct msm_gpio qup_i2c_gpios_io[] = {
 		"qup_sda" },
 };
 
-struct msm_gpio qsd_spi_gpio_config_data[0];
+struct msm_gpio qsd_spi_gpio_config_data[] = {
+	{ GPIO_CFG(45, 1, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_6MA),
+		"spi_clk" },
+	{ GPIO_CFG(46, 1, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_6MA),
+		"spi_cs0" },
+	{ GPIO_CFG(47, 1, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_6MA),
+		"spi_mosi" },
+	{ GPIO_CFG(48, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_UP, GPIO_CFG_2MA),
+		"spi_miso" },
+};
 
 int qsd_spi_gpio_config_data_size = ARRAY_SIZE(qsd_spi_gpio_config_data);
 

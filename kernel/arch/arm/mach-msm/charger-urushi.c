@@ -10,7 +10,7 @@
 
 #include <linux/battery_chargalg.h>
 
-struct device_data device_data = {
-	.battery_capacity_mah = 1500,
-	.maximum_charging_current_ma = 1050,
+struct ambient_temperature_data battery_chargalg_platform_ambient_temp = {
 };
+
+const u16 battery_capacity_mah = 1200;
