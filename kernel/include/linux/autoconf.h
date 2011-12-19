@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux kernel version: 2.6.32.9
- * Fri Dec 16 20:53:50 2011
+ * Sun Dec 18 15:53:16 2011
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_VIDEO_V4L1_COMPAT 1
@@ -317,6 +317,7 @@
 #define CONFIG_ARCH_MSM7X30 1
 #define CONFIG_SYSCTL_SYSCALL 1
 #define CONFIG_SND_JACK 1
+#define CONFIG_CPU_FREQ_GOV_INTERACTIVE 1
 #define CONFIG_MSM_IDLE_STATS_BUCKET_COUNT 10
 #define CONFIG_MEDIA_TUNER_TEA5767 1
 #define CONFIG_MEDIA_TUNER_MT20XX 1
